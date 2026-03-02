@@ -17,12 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <head>
-        <style dangerouslySetInnerHTML={{
-          __html: `
-          body { min-height: max(884px, 100dvh); }
-        `}} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0..1,-50..200,20..48&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.className} bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased`}>
+      <body className={`bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased`}>
         {children}
       </body>
     </html>
