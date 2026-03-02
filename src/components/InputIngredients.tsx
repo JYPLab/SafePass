@@ -106,28 +106,36 @@ export function InputIngredients({ projectId, onBack, onAnalyze }: InputIngredie
                 </div>
 
                 {/* Secondary Actions Grid */}
-                <div className="grid grid-cols-1 gap-4 p-4">
-                    <button className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all group text-left">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-green-500/10 text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform">
+                <div className="flex flex-col gap-4 p-4 pt-2">
+                    {/* Excel Upload Option */}
+                    <div
+                        onClick={() => alert("Excel/CSV bulk upload feature will be available in V3.")}
+                        className="flex items-center gap-4 bg-slate-800 rounded-xl p-4 cursor-pointer hover:bg-slate-700 transition-colors border border-slate-700"
+                    >
+                        <div className="flex items-center justify-center size-12 rounded-lg bg-emerald-900/50 text-emerald-400">
                             <span className="material-symbols-outlined text-2xl">table_view</span>
                         </div>
-                        <div className="flex flex-col flex-1">
-                            <span className="text-slate-900 dark:text-white font-bold text-base">Upload Excel / BOM</span>
-                            <span className="text-slate-500 dark:text-slate-400 text-sm">Import bulk data from spreadsheet files</span>
+                        <div className="flex-1">
+                            <h3 className="text-white font-semibold text-lg">Upload Excel / BOM</h3>
+                            <p className="text-slate-400 text-sm">Import bulk data from spreadsheet files</p>
                         </div>
-                        <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
-                    </button>
+                        <span className="material-symbols-outlined text-slate-500">chevron_right</span>
+                    </div>
 
-                    <button className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all group text-left">
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
+                    {/* Paste Text Option */}
+                    <div
+                        onClick={() => alert("Manual text pasting feature will be available in V3.")}
+                        className="flex items-center gap-4 bg-slate-800 rounded-xl p-4 cursor-pointer hover:bg-slate-700 transition-colors border border-slate-700 border-indigo-500/30 shadow-[0_0_15px_rgba(99,102,241,0.1)]"
+                    >
+                        <div className="flex items-center justify-center size-12 rounded-lg bg-indigo-900/50 text-indigo-400">
                             <span className="material-symbols-outlined text-2xl">content_paste</span>
                         </div>
-                        <div className="flex flex-col flex-1">
-                            <span className="text-slate-900 dark:text-white font-bold text-base">Paste Ingredients</span>
-                            <span className="text-slate-500 dark:text-slate-400 text-sm">Copy and paste text directly</span>
+                        <div className="flex-1">
+                            <h3 className="text-white font-semibold text-lg">Paste Ingredients</h3>
+                            <p className="text-slate-400 text-sm">Copy and paste text directly</p>
                         </div>
-                        <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
-                    </button>
+                        <span className="material-symbols-outlined text-indigo-500">chevron_right</span>
+                    </div>
                 </div>
             </div>
 
